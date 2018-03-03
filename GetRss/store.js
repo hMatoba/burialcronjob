@@ -27,6 +27,10 @@ async function storeRss(url) {
     });
 
     bulk.execute();
+    
+    let date = new Date();
+    let now = date.toGMTString();
+    db.collection("logs").insert({"time":now});
 }
 
 function asyncParseString(xml) {
