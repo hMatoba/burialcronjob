@@ -13,4 +13,8 @@ module.exports = function (context, myTimer) {
             context.done();
         })();
     }
+    else
+    {
+        context.done();
+    }
 };
