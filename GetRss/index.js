@@ -1,4 +1,4 @@
-const storeRss = DbConnection = require('./store.js').storeRss;
+const storeRss = require('./store.js').storeRss;
 
 module.exports = function (context, myTimer) {
     var timeStamp = new Date().toISOString();

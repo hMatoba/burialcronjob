@@ -48,4 +48,4 @@ function asyncParseString(xml) {
 
 module.exports = {
     storeRss: storeRss,
-}
+};

@@ -24,4 +24,4 @@ class DbConnection {
 
 module.exports = {
     DbConnection: DbConnection,
-}
+};
