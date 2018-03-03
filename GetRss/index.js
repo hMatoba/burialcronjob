@@ -8,7 +8,6 @@ module.exports = function (context, myTimer) {
         (async () => {
             const url = 'http://jvndb.jvn.jp/ja/rss/jvndb.rdf';
             await storeRss(url);
-            process.exit();
 
             context.log('JavaScript timer trigger function ran!', timeStamp);       
             context.done();
