@@ -3,17 +3,15 @@ const storeRss = require('./store.js').storeRss;
 module.exports = function (context, myTimer) {
     var timeStamp = new Date().toISOString();
     
-    if(myTimer.isPastDue)
+    if (myTimer.isPastDue)
     {
         (async () => {
-            (async function () {
-                const url = 'http://jvndb.jvn.jp/ja/rss/jvndb.rdf';
-                await storeRss(url);
-                process.exit();
-            })();
+            const url = 'http://jvndb.jvn.jp/ja/rss/jvndb.rdf';
+            await storeRss(url);
+            process.exit();
+
+            context.log('JavaScript timer trigger function ran!', timeStamp);       
+            context.done();
         })();
     }
-    context.log('JavaScript timer trigger function ran!', timeStamp);   
-    
-    context.done();
 };

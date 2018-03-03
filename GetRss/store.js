@@ -24,7 +24,6 @@ async function storeRss(url) {
             modified: item["dcterms:modified"],
         };
         bulk.find({"_id":item["sec:identifier"]}).upsert().updateOne(doc);
-        console.log(doc["_id"]);
     });
 
     bulk.execute();
