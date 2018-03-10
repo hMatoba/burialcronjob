@@ -5,14 +5,14 @@ module.exports = function (context, myTimer) {
     
     if (myTimer.isPastDue)
     {
-        context.log('JavaScript is running late!');
+        // context.log('JavaScript is running late!');
     }
 
     (async () => {
         const url = 'http://jvndb.jvn.jp/ja/rss/jvndb.rdf';
         await storeRss(url);
 
-        context.log('JavaScript timer trigger function ran!', timeStamp);       
+        // context.log('JavaScript timer trigger function ran!', timeStamp);       
         context.done();
     })();
 };
